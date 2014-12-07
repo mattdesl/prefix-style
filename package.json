@@ -1,0 +1,44 @@
+{
+  "name": "prefix-style",
+  "version": "1.0.0",
+  "description": "gets a prefixed name for a css style",
+  "main": "index.js",
+  "license": "MIT",
+  "author": {
+    "name": "Matt DesLauriers",
+    "email": "dave.des@gmail.com",
+    "url": "https://github.com/mattdesl"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "beefy": "^2.1.1",
+    "browserify": "^7.0.0",
+    "tape": "^3.0.3"
+  },
+  "scripts": {
+    "test": "beefy test.js --open"
+  },
+  "keywords": [
+    "prefix",
+    "css",
+    "style",
+    "rule",
+    "prefixes",
+    "prefixing",
+    "webkit",
+    "-webkit",
+    "-ms",
+    "-moz",
+    "-o",
+    "styles",
+    "transform"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mattdesl/prefix-style.git"
+  },
+  "homepage": "https://github.com/mattdesl/prefix-style",
+  "bugs": {
+    "url": "https://github.com/mattdesl/prefix-style/issues"
+  }
+}
