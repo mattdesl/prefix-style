@@ -2,7 +2,7 @@
 
 [![stable](http://badges.github.io/stability-badges/dist/stable.svg)](http://github.com/badges/stability-badges)
 
-For a camel case string like `"transform"` or `"transformStyle"`, returns the prefixed version like `"MozTransformStyle"` (if necessary) or `false` if the style is unsupported. Implementation by [Paul Irish](https://gist.github.com/paulirish/523692).
+For a camel case string like `"transform"` or `"transformStyle"`, returns the prefixed version like `"MozTransformStyle"` (if necessary). Returns `false` if the style is unsupported. 
 
 ```js
 var camel = require('to-camel-case')
@@ -12,6 +12,8 @@ var key = prefix(camel('transform-style'))
 if (key)
     element.style[key] = 'preserve-3d'
 ```
+
+Implementation by [Paul Irish](https://gist.github.com/paulirish/523692).
 
 ## Usage
 
