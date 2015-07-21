@@ -1,19 +1,26 @@
-var elem = null
+var div = null
+var prefixes = [ 'Webkit', 'Moz', 'O', 'ms' ]
 
-//https://gist.github.com/paulirish/523692
-module.exports = function prefix(prop) {
-    var prefixes = ['Moz', 'Khtml', 'Webkit', 'O', 'ms'],
-        upper = prop.charAt(0).toUpperCase() + prop.slice(1)
-    
-    if (!elem)
-        elem = document.createElement('div')
+module.exports = function prefixStyle (prop) {
+  // borderRadius -> BorderRadius
+  var titleCase = prop.charAt(0).toUpperCase() + prop.slice(1)
+  
+  if (!div) { // re-use dummy element
+    div = document.createElement('div')
+  }
+  
+  var style = div.style
+  
+  // prop exists without prefix
+  if (prop in style)
+    return prop
 
-    if (prop in elem.style)
-        return prop
-
-    for (var len = prefixes.length; len--;) {
-        if ((prefixes[len] + upper) in elem.style)
-            return (prefixes[len] + upper)
-    }
-    return false
+  for (var i = prefixes.length; i >= 0; i--) {
+    var name = prefixes[i] + titleCase
+    // e.g. WebkitBorderRadius or webkitBorderRadius
+    if (name in style) {
+      return name
+    }    
+  }
+  return false
 }
