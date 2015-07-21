@@ -9,11 +9,10 @@ var camel = require('to-camel-case')
 var prefix = require('prefix-style')
 
 var key = prefix(camel('transform-style'))
-if (key)
-    element.style[key] = 'preserve-3d'
+if (key) {
+  element.style[key] = 'preserve-3d'
+}
 ```
-
-Implementation by [Paul Irish](https://gist.github.com/paulirish/523692).
 
 ## Usage
 
