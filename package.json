@@ -11,12 +11,14 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "beefy": "^2.1.1",
-    "browserify": "^7.0.0",
-    "tape": "^3.0.3"
+    "browserify": "^12.0.1",
+    "standard": "^5.4.1",
+    "tap-spec": "^4.1.1",
+    "tape": "^3.0.3",
+    "testling": "^1.7.1"
   },
   "scripts": {
-    "test": "beefy test.js --open"
+    "test": "standard && browserify test.js | testling | tap-spec"
   },
   "keywords": [
     "prefix",
