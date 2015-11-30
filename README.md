@@ -13,7 +13,7 @@ if (key)
     element.style[key] = 'preserve-3d'
 ```
 
-Implementation by [Paul Irish](https://gist.github.com/paulirish/523692).
+Original implementation by [Paul Irish](https://gist.github.com/paulirish/523692), with some modifications by me.
 
 ## Usage
 
