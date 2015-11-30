@@ -1,6 +1,6 @@
 {
   "name": "prefix-style",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "gets a prefixed name for a css style",
   "main": "index.js",
   "license": "MIT",
